@@ -1,4 +1,7 @@
 {
+    "autoload": {
+      "psr-4": {"RetsTools\\": "src/"}
+    },
     "require": {
         "troydavisson/phrets": "2.*",
         "symfony/console": "2.7.*"
