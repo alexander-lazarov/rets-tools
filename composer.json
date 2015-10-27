@@ -1,5 +1,6 @@
 {
     "require": {
-        "troydavisson/phrets": "2.*"
+        "troydavisson/phrets": "2.*",
+        "symfony/console": "2.7.*"
     }
 }
