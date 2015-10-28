@@ -24,8 +24,9 @@ class TestConnectionCommand extends Command
         $output->writeln('<comment>Testing connection...</comment>');
         $rets = new Session($config);
 
-        try {
-            $conntect = $rets->Login();
+        try
+        {
+            $connect = $rets->Login();
         }
         catch(Exception $e) {
             $output->writeln('<error>Cannot connect:</error>');
