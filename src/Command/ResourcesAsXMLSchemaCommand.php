@@ -128,6 +128,22 @@ class ResourcesAsXMLSchemaCommand extends Command
             $size = " size=\"$size\"";
         }
 
-        $output->writeln(sprintf('    <column name="%s" phpName="%s" type="%s"%s />', $name, $phpName, $type, $size));
+        if( $field->getRequired() )
+        {
+            $required = '';
+        }
+        else
+        {
+            $required = ' required="true"';
+        }
+
+        $output->writeln(sprintf(
+            '    <column name="%s" phpName="%s" type="%s"%s%s />',
+            $name,
+            $phpName,
+            $type,
+            $size,
+            $required
+        ));
     }
 }
