@@ -128,6 +128,12 @@ class ResourcesAsXMLSchemaCommand extends Command
             $size = " size=\"$size\"";
         }
 
-        $output->writeln(sprintf('    <column name="%s" phpName="%s" type="%s"%s />', $name, $phpName, $type, $size));
+        $output->writeln(sprintf(
+            '    <column name="%s" phpName="%s" type="%s"%s />',
+            $name,
+            $phpName,
+            $type,
+            $size
+        ));
     }
 }
